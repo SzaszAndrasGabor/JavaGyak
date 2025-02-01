@@ -30,9 +30,10 @@
                     <li><a th:href="@{/messages}">Üzenetek</a></li>
                     <li sec:authorize="hasAuthority('admin')"><a th:href="@{/lotto-query}">Lekérdezés</a></li>
                     <li sec:authorize="isAnonymous()" ><a th:href="@{/login}">Bejelentkezés</a></li>
-                    <li sec:authorize="isAuthenticated()"> <p><span  sec:authentication="principal.username">User</span></p> </li>
-                    <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Kijelentkezés</a></li>
+                    <li sec:authorize="isAuthenticated()"> <p></p> </li>
+                    <li ><a th:href="@{/logout}">Kijelentkezés</a></li>
                 </ul>
+                <br><p sec:authorize="isAuthenticated()"><b> Belépett, kedves <span  sec:authentication="principal.username">User</span>!</b></p>
             </nav>
 
         </header>
