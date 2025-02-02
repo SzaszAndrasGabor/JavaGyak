@@ -19,7 +19,12 @@
             <div class="grid">
               <div class="row gtr-50">
                 <div class="col-12-medium"><a href="#" class="image fit"><img src="/images/icon-5.png" alt="" /></a></div>
-
+                <p>Megvalósuló lekérdezés: </p>
+                <p>SELECT m.helyaz, h.telepules, h.utca, sz.nev, m.munkaora, m.anyagar 
+                  FROM szerelo sz
+                  JOIN munkalap m ON sz.az = m.szereloaz
+                  JOIN hely h ON m.helyaz = h.az
+                  ORDER BY m.helyaz</p>
               </div>
             </div>
           </section>
