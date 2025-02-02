@@ -28,12 +28,14 @@
                     <li class="current"><a th:href="@{/}">Főoldal</a></li>
                     <li><a th:href="@{/contact}">Kapcsolat</a></li>
                     <li><a th:href="@{/messages}">Üzenetek</a></li>
-                    <li sec:authorize="hasAuthority('admin')"><a th:href="@{/lotto-query}">Lekérdezés</a></li>
+                    <li sec:authorize="hasAuthority('Admin')"><a th:href="@{/lekerdez}">Lekérdezés</a></li>
                     <li sec:authorize="isAnonymous()" ><a th:href="@{/login}">Bejelentkezés</a></li>
                     <li sec:authorize="isAuthenticated()"> <p></p> </li>
                     <li ><a th:href="@{/logout}">Kijelentkezés</a></li>
                 </ul>
                 <br><p sec:authorize="isAuthenticated()"><b> Belépett, kedves <span  sec:authentication="principal.username">User</span>!</b></p>
+                <p sec:authorize="isAuthenticated()"><b> Jogosultsága: <span  sec:authentication="principal.authorities">User</span>!</b></p>
+
             </nav>
 
         </header>
@@ -53,9 +55,9 @@
                     <section class="widget links">
                         <h3>Hasznos linkek</h3>
                         <ul class="style2">
-                            <li><a href="http://kutyautes.hu" target="_blank">Hatoslottó weboldal (web2 beadandó)</a></li>
-                            <li><a href="http://szaboferenc.kutyautes.hu" target="_blank">Második verzió</a></li>
-                            <li><a href="http://nagyerik.kutyutes.hu" target="_blank">Harmadik verzió</a></li>
+                            <li><a href="http://google.com" target="_blank">Google</a></li>
+                            <li><a href="http://NJE.hu" target="_blank">NJE</a></li>
+
                         </ul>
                     </section>
                 </div>
@@ -70,8 +72,8 @@
                             <li><a href="https://www.youtube.com/SzerencsejatekZrtHU" class="icon brands fa-youtube"><span class="label">Youtubet</span></a></li>
                             <li><a href="https://hu.linkedin.com/company/szerencsej-t-k-zrt." class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
                         </ul>
-                        <p>Fehér út 10.<br />
-                            Budapest, 1106<br />
+                        <p>Szentmihályi út 130.<br />
+                            Budapest, 1152<br />
                             06 1 443 9102</p>
                     </section>
                 </div>

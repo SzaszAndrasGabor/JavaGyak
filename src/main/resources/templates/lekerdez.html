@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org" th:replace="layout::layout(~{::content}, ~{::meta})">
+
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+<!-- Main -->
+<div id="main-wrapper" th:fragment="content">
+  <div class="container">
+    <div class="row gtr-200">
+      <div class="col-4 col-12-medium">
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+          <section class="widget thumbnails">
+            <h2>Üdvözöljük!!</h2>
+            <div class="grid">
+              <div class="row gtr-50">
+                <div class="col-12-medium"><a href="#" class="image fit"><img src="/images/szereles.jpg" alt="" /></a></div>
+
+              </div>
+            </div>
+          </section>
+        </div>
+
+      </div>
+      <div class="col-8 col-12-medium imp-medium">
+
+        <!-- Content -->
+        <div id="content">
+          <section class="last">
+            <h2>lekérdezés</h2>
+            <p class="about_text">Az adatbázisban a kövezkező munkák szerepelnek:</p>
+
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

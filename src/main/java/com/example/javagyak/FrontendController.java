@@ -50,7 +50,11 @@ public class FrontendController {
         model.addAttribute("user", new User());
         return "register";
     }
-
+    @GetMapping("/lekerdez")
+    public String lekerdez(Model model) {
+        model.addAttribute("user", new User());
+        return "lekerdez";
+    }
 
     @PostMapping("/register")
     public String registerUser(@ModelAttribute User user, Model model) {

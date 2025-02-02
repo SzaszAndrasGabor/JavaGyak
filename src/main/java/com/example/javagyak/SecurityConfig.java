@@ -50,7 +50,7 @@ public class SecurityConfig {
                                                )
                                         .permitAll()
                                         // Protect the other routes
-                                        .requestMatchers("/", "/munkak", "/szerelok/*", "/helyszinek").authenticated()
+                                        .requestMatchers("/", "/munkak", "/szerelok/*", "/helyszinek","/lekerdez").authenticated()
                                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         )
                         .formLogin(
