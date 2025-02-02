@@ -36,17 +36,11 @@ public class SecurityConfig {
                                 auth -> auth
                                         // Allow public access to static resources
                                         .requestMatchers(
-
-                                                "/resources/**",
-                                                "/static/**",
-                                                "/assets/**",
-                                                "/images/**",
-                                                "/login",
-                                                "/register",
-                                                "/contact",
-                                                "/contact/submit",
-                                                "/contact/submit/*",
-                                                "/messages"
+                                                "/resources/**","/static/**",
+                                                "/assets/**",  "/images/**",
+                                                "/login",     "/register",
+                                                "/contact",   "/contact/submit",
+                                                "/contact/submit/*","/messages"
                                                )
                                         .permitAll()
                                         // Protect the other routes
