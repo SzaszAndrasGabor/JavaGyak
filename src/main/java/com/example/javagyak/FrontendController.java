@@ -1,5 +1,6 @@
 package com.example.javagyak;
 
+import com.example.javagyak.lekerdezes.TablaGenerator;
 import com.example.javagyak.login.User;
 import com.example.javagyak.login.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.List;
+import java.sql.SQLException;
 
 @Controller
 public class FrontendController {
@@ -51,8 +52,10 @@ public class FrontendController {
         return "register";
     }
     @GetMapping("/lekerdez")
-    public String lekerdez(Model model) {
-        model.addAttribute("user", new User());
+    public String lekerdez(Model model) throws SQLException {
+        TablaGenerator generator = new TablaGenerator();
+        model.addAttribute("str", generator.getTableHtml());
+
         return "lekerdez";
     }
 
