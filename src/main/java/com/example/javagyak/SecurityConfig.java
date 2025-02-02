@@ -40,11 +40,12 @@ public class SecurityConfig {
                                                 "/assets/**",  "/images/**",
                                                 "/login",     "/register",
                                                 "/contact",   "/contact/submit",
-                                                "/contact/submit/*","/messages"
+                                                "/contact/submit/*","/messages",
+                                                "Szerelok", "Szerelok/*"
                                                )
                                         .permitAll()
                                         // Protect the other routes
-                                        .requestMatchers("/", "/munkak", "/szerelok/*", "/helyszinek","/lekerdez").authenticated()
+                                        .requestMatchers("/", "/munkak", "/helyszinek","/lekerdez").authenticated()
                                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         )
                         .formLogin(
